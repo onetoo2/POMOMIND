@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Segoe UI";
+}
+
+.pantalla-inicio{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #474E5D;
+}
+
+h1{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2.8em;
+    font-weight: 400;
+    font-family: "Segoe UI";
+    color: #F7FDFD;
+}
+.linea{
+    width: 100%;
+    height: 28%;
+    background-color:#26C5BF;
+    float: left;
+}
+.contenido{
+    float: left;
+    margin-top: 20px;
+    
+}
+.mensaje1{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: "Segoe UI";
+    color: #F7FDFD;
+}
+
+.login{
+    float: left;
+    margin-top: 20px;
+}
+.img-circle{
+    margin-top: 10px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: gray;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: gray;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: gray;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: gray;
+}
+
+.contenido{
+    width: 100%;
+    float: left;
+    margin-top: 70px;
+    height: 60%;
+}
+
+.mensaje2{
+    text-align: center;
+    font-size: 1.2em;
+    color: white;
+}
+
+.registro{
+    float: left;
+    margin-top: 20px;
+    width: 90%;
+    height: 48%;
+    margin-left: 5%;
+
+}
+
+.registro>input{
+    font-family: "Segoe UI";
+    width: 100%;
+    margin-bottom: 16px;
+    height: 35px;
+    border-radius: 10px;
+    outline: none;
+    float: left;
+    border: none;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    padding-left: 10px;
+    background-color: white;
+    color: black;
+}
+
+.botones{
+    width: 50%;
+    height: 40%;
+    margin-top: 190px;
+    margin-left: 25%;
+}
+
+.botones>button{
+    height: 35px;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    background-color: #26C5BF;
+    border: none;
+    color: white;
+}
+
+#registrar{
+    margin-top: 40px;
+    width: 100%;
+}
+#regresar{
+    margin-top: 20px;
+    
+    width: 100%;
+}
+#registrar:hover{
+    width: calc(100% - 15px);
+    height: 32px;
+    font-size: 1.1em;
+    margin-left: 1%;
+}
+#regresar:hover{
+    width: calc(100% - 15px);
+    height: 32px;
+    font-size: 1.1em;
+    margin-left: 1%;
+}
+
+.error{
+    float: left;
+    font-size: 1em;
+    margin-top: -5px;
+    color: #EC5337;
+}

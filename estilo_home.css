@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+   font-family: 'Segoe UI';
+}
+
+.pantalla{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+
+.bg-1 { 
+      background-color: #26C5BF; /* Green */
+      color: #F7FDFD;
+  }
+  .bg-2 { 
+      background-color: #474e5d; /* Dark Blue */
+      color: #F7FDFD;
+      height: 80px;
+  }
+  .bg-3 { 
+      background-color: #fff; /* White */
+      color: #555555;
+  }
+
+p{
+    font-size: 1.4em;
+}
+#mensaje{
+    font-size: 1.3em;
+    margin-bottom: -1px;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 1.2em;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-size: 1.2em;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  font-size: 1.2em;
+}
+:-moz-placeholder { /* Firefox 18- */
+  font-size: 1.2em;
+}
+
+.atajos{
+    position: absolute;
+    margin-left: 65%;
+    margin-top: 5px;
+}
+a{
+    font-size: 3em;
+}
+#boton{
+    margin-top: 20px;
+}
+#boton:hover{
+    outline: none;
+    margin-left: 40px;
+}
+#alerta-titulo{
+    margin-top: 3px;
+}
+.error{
+    float: left;
+    font-size: 1em;
+    margin-top: -12px;
+    color: #EC5337;
+}
+
