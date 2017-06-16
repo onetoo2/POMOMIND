@@ -401,4 +401,25 @@ function guardarAjustes(){
     }
 }
 
+function vaciarIndex(){
+    document.getElementById('user').value = "";
+    document.getElementById('password').value = "";
+}
 
+function vaciarRegistro(){
+    document.getElementById('usuario').value = "";
+    document.getElementById('correo').value = "";
+    document.getElementById('contraseña').value = "";
+    document.getElementById('confirmar-contraseña').value = "";
+}
+
+function vaciarHome(){
+    document.getElementById('code').value = "";
+}
+
+function vaciarAjustes(){
+    document.getElementById('usuario').value = "";
+    document.getElementById('c').value = "";
+    document.getElementById('p').value = "";
+    document.getElementById('confirmar-c').value = "";
+}
