@@ -1,10 +1,10 @@
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: "Segoe UI";
 }
 
-.pantalla-inicio{
+.pantalla-inicio {
     top: 0;
     left: 0;
     width: 100%;
@@ -12,41 +12,48 @@
     background-color: #26C5BF;
 }
 
-h1{
+h1 {
     text-align: center;
     margin-top: 50px;
     font-size: 2.8em;
     font-weight: 400;
     color: #F7FDFD;
 }
-.linea{
+
+.linea {
     background: #474E5D;
     float: left;
     width: 100%;
     height: 28%;
 }
-.contenido{
+
+.contenido {
     float: left;
     margin-top: 70px;
     width: 100%;
     height: 58%;
 }
-.mensaje1{
+
+.mensaje1 {
     text-align: center;
     font-size: 1.5em;
     color: #F7FDFD;
 }
 
-.login{
+.login {
     float: left;
     margin-top: 20px;
     width: 90%;
     height: 35%;
     margin-left: 5%;
 }
-.img-circle{
+
+.img-center {
+    text-align: center;
+}
+
+.img-circle {
     margin-top: 10px;
-    
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -62,7 +69,7 @@ h1{
   color: gray;
 }
 
-.login>input{
+.login>input {
     width: 100%;
     margin-top: 5px;
     margin-bottom: 20px;
@@ -78,14 +85,14 @@ h1{
     color: black;
 }
 
-.botones{
+.botones {
     width: 50%;
     height: 40%;
     margin-top: 145px;
     margin-left: 25%;
 }
 
-.botones>button{
+.botones>button {
     float: left;
     height: 35px;
     box-sizing: border-box;
@@ -95,30 +102,26 @@ h1{
     border: none;
     color: white;
     font-size: 1.2em;
- 
 }
-#iniciar{
+
+#iniciar {
     margin-top: 35px;
     width: 100%;
 }
-#registro{
+
+#registro {
     margin-top: 25px;
-    
     width: 100%;
 }
-#iniciar:hover{
+
+#iniciar:hover, #registro:hover {
     width: calc(100% - 15px);
     height: 32px;
     font-size: 1.1em;
     margin-left: 1%;
 }
-#registro:hover{
-    width: calc(100% - 15px);
-    height: 32px;
-    font-size: 1.1em;
-    margin-left: 1%;
-}
-.error1{
+
+.error1 {
     float: left;
     font-size: 1em;
     margin-bottom: -5px;

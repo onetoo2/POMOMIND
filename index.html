@@ -1,43 +1,44 @@
-<html>
+<html lang="es">
 
   <head>
-      <meta charset="utf-8">
+    <meta charset="utf-8">
+    <title>POMOMIND | Administre su tiempo de programación</title>
+
     <!--Mobile specific meta goodness :)-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Ancho del dispositivo, no permite escalar-->
- <link rel="stylesheet" type="text/css" href="estilo_index.css">
-
+    <link rel="stylesheet" type="text/css" href="estilo_index.css">
 
     <script src="./funciones.js"></script>
-      
     </head>
     
-    <body>
+<body>
+
     <div class="pantalla-inicio">
-        
-        
-        
-        <div id="linea" class="linea">
+
+    <div id="linea" class="linea">
         <h1>POMOMIND</h1>
-        <center><img src="icon.png" class="img-circle" alt="Bird" width="125" height="125"></center></div>
+        <div class="img-center"><img src="icon.png" class="img-circle" alt="Bird" width="125" height="125"></div>
+    </div>
         
         <div class="contenido"> 
         <p class="mensaje1" id="mensaje1">!Bienvenido a Pomomind!</p>
         
         <section class="login">
-            
         <input type="text" placeholder="Usuario" id="user">
         <input type="password" placeholder="Contraseña" id="password">
             <p id="error1" class="error1"></p>
-             </section>
-            <div class="botones">
+        </section>
+
+        <div class="botones">
         <button onclick="login()" id="iniciar">INICIAR</button>
-        <button onclick="navegar('registro.html')" id="registro">REGÍSTRATE</button></center>
-            </div>
-        </div>
+        <button onclick="navegar('registro.html')" id="registro">REGÍSTRATE</button>
         </div>
         
-    </body>
+        </div>
+    </div>
+        
+</body>
 
 <script>
 window.addEventListener('load',vaciarIndex,true);
