@@ -112,7 +112,7 @@ article {
 /*header*/
 
 header {
-	background: #26C5BF;
+	background: linear-gradient(to right, green, red);
 	padding: 15px 20px;
     height: 70px;
 }
@@ -276,6 +276,10 @@ footer {
     background-color: white;
     margin-left:0px;
     margin-top: 30px;
+}
+
+.option {
+	cursor: pointer;
 }
 
 .atajos {

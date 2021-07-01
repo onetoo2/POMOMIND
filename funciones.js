@@ -164,7 +164,6 @@ function login() {
             }
 
             else {
-                
                 document.getElementById('error1').innerHTML = "*El usuario y contraseña no coinciden.";
                 document.querySelector('.error1').style.fontSize = "1.1em";
                 if (navigator.vibrate) {
@@ -215,7 +214,7 @@ function guardarPersonales() {
                 document.getElementById('error').innerHTML = "*Ingresa un lenguaje de programación.";
                 navigator.vibrate(350);
                 return;
-            }else {
+            } else {
                 //localStorage.datos = {'nombre':document.getElementById('name').value,'codigo': document.getElementById('code').value};
                 //localStorage.setItem('nombre',a);
                 document.getElementById('error').innerHTML = "";

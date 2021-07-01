@@ -13,7 +13,7 @@
 }
 
 .bg-1 { 
-    background-color: #26C5BF; /* Green */
+    background: linear-gradient(to right, green, red); /* Green */
     color: #F7FDFD;
 }
 
@@ -50,6 +50,10 @@ p {
   font-size: 1.2em;
 }
 
+.option {
+    cursor: pointer;
+}
+
 .atajos {
     position: absolute;
     margin-left: 65%;
@@ -62,6 +66,8 @@ a {
 
 #boton {
     margin-top: 20px;
+    background-color: #EC5337;
+    color: white;
 }
 
 #boton:hover {
@@ -71,6 +77,10 @@ a {
 
 #alerta-titulo {
     margin-top: 3px;
+}
+
+.text-center {
+    background-color:#26C5BF;
 }
 
 .error {
