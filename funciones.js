@@ -1,4 +1,3 @@
-
 // JAVASCRIPT DE LOGIN Y REGISTRO
 
 //Crear arreglos para almacenar múltiples usuarios
@@ -18,35 +17,35 @@
     var conf;
 
 //Función para dirigir a otras partes de la app
-function navegar(liga){
+function navegar(liga) {
     window.location.assign(liga);
 }
 
 
 //Función de botón REGISTRO
-function guardar(){
-    //CAPTURAMOS LOS VALORES EN VARIABLES
+function guardar() {
+//CAPTURAMOS LOS VALORES EN VARIABLES
     nombre = document.getElementById('usuario').value;
     correo = document.getElementById('correo').value;
     contraseña = document.getElementById('contraseña').value;
     confirmar = document.getElementById('confirmar-contraseña').value;
     
     //Validar si hay algún input en blanco
-    if(nombre == "" || correo == "" || contraseña == "" || confirmar == ""){
+if (nombre == "" || correo == "" || contraseña == "" || confirmar == "") {
         document.getElementById('error').innerHTML = "*Hay uno o más campos vacíos.";
-        if(navigator.vibrate){
+        if (navigator.vibrate) {
                 navigator.vibrate('3000');
-            }else{
+            } else {
+
             }
-        
-        document.querySelector('.error').style.fontSize = "1em";
+            document.querySelector('.error').style.fontSize = "1em";
     }
     
-    else{
+    else {
         //Validar si los inputs de las contraseñas coinciden
-    if(contraseña==confirmar){
+    if (contraseña==confirmar) {
         //Verificar si ya hay un contador almacenado 
-        if(localStorage.getItem('contador')){
+        if (localStorage.getItem('contador')) {
             
             nom = JSON.parse(localStorage['usuarios']);
             corr = JSON.parse(localStorage['correos']);
@@ -58,11 +57,12 @@ function guardar(){
             p = [];
             c = [];
             
-            for(var i=0; i<=contador; i++){
+            for (var i=0; i<=contador; i++) {
              n.push(nom[i]);
              c.push(corr[i]);
              p.push(contra[i]);
-        }
+            }
+
             contador++;
             
             n[contador] = nombre;
@@ -85,7 +85,7 @@ function guardar(){
             alert('Listo! Tus datos han sido guardados exitosamente.');
             navegar('index.html');
     }
-        else{
+        else {
             //Crear contador e inicializarlo
             localStorage.setItem('contador','0');
             
@@ -104,24 +104,23 @@ function guardar(){
             
             alert('Listo! Tus datos han sido guardados exitosamente.');
             navegar('index.html');
-        }
-        
+        }  
     }
         
-    else{
+    else {
         //Mensaje de error si contraseñas no coinciden
         document.getElementById('error').innerHTML = "*Las contraseñas no coinciden.";
-        if(navigator.vibrate){
+        if (navigator.vibrate) {
                 navigator.vibrate('3000');
-            }else{
+            } else {
+
             }
         document.querySelector('.error').style.fontSize = "1em";
     }
-
-    }
+}
 }
 
-function login(){
+function login() {
     
     //Obtener texto de inputs en Login
     user = document.getElementById('user').value;
@@ -130,61 +129,64 @@ function login(){
     contador = localStorage.getItem('contador');
     
     //Validar si hay algún input sin contestar
-    if(user=="" || pass==""){
+    if (user=="" || pass=="") {
         document.getElementById('error1').innerHTML = "*Hay uno o más campos vacíos.";
         
         document.querySelector('.error1').style.fontSize = "1.1em";
-        if(navigator.vibrate){
+        if (navigator.vibrate) {
                 navigator.vibrate('3000');
-            }else{
+            } else {
+
             }
     }
-    else{
+    else {
         //Almacenar los arreglos de usuarios en localStrage en nueva variable
-        if(localStorage.getItem('usuarios')){
+        if (localStorage.getItem('usuarios')) {
         
         nom = JSON.parse(localStorage['usuarios']);
         contra = JSON.parse(localStorage['contraseñas']);
         //Validar si hay algún usuario registrado en el arreglo
-        if(localStorage.getItem('usuarios'))
-        for(var i=0; i<=contador; i++){
-        
+
+        if (localStorage.getItem('usuarios'))
+        for (var i=0; i<=contador; i++) {
             //Si los usuarios y contraseñas coinciden dirigir al inicio de la app
-        if(nom[i] == user && contra[i] == pass){
+        if (nom[i] == user && contra[i] == pass) {
             z = i;
             localStorage.setItem('z', z);
         }
-            else{
+            else {
+
             }
     }
-            if(localStorage.getItem('z')){
+            if (localStorage.getItem('z')) {
                 alert('Inicio de sesión exitoso!');
             navegar('home.html');
             }
-            else{
-                
+
+            else {
                 document.getElementById('error1').innerHTML = "*El usuario y contraseña no coinciden.";
                 document.querySelector('.error1').style.fontSize = "1.1em";
-                if(navigator.vibrate){
+                if (navigator.vibrate) {
                 navigator.vibrate('3000');
-            }else{
+            } else {
+
             }
                 
             }
     }
-        else{
+        else {
             //Mensaje de error en caso de que el usuario no esté registrado
             document.getElementById('error1').innerHTML = "*El usuario no está registrado.";
             document.querySelector('.error1').style.fontSize = "1.1em";
-            if(navigator.vibrate){
+            if (navigator.vibrate) {
                 navigator.vibrate('3000');
-            }else{
+            } else{
+
             }
         }
     }
 
 }
-
 
 //JAVASCRIPT DE INICIO APP
 
@@ -194,14 +196,14 @@ var minutos = 0;
 var horas = 0;
 var descanso = false;
 
-function guardarPersonales(){
+function guardarPersonales() {
     //CAPTURAMOS LOS VALORES EN VARIABLES
     //a = document.getElementById('name').value;
     b = document.getElementById('code').value;
     //alert(a,b);
-    if(typeof(Storage) !== "undefined") {
+    if (typeof(Storage) !== "undefined") {
             
-            if (/*a.length < 1 || */b.length < 1 ){
+            if (/*a.length < 1 || */b.length < 1 ) {
                 // enable vibration support
                     navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
 
@@ -212,7 +214,7 @@ function guardarPersonales(){
                 document.getElementById('error').innerHTML = "*Ingresa un lenguaje de programación.";
                 navigator.vibrate(350);
                 return;
-            }else{
+            } else {
                 //localStorage.datos = {'nombre':document.getElementById('name').value,'codigo': document.getElementById('code').value};
                 //localStorage.setItem('nombre',a);
                 document.getElementById('error').innerHTML = "";
@@ -228,7 +230,7 @@ function guardarPersonales(){
 
 }
 
-function cargarPersonales(){
+function cargarPersonales() {
     //CARGAMOS LOS DATOS GUARDADOS EN LOCALSTORAGE
     //name =  localStorage.getItem('nombre');
     code =  localStorage.getItem('codigo');
@@ -236,27 +238,27 @@ function cargarPersonales(){
     document.getElementById('code').innerHTML += " "+ code;
 }
 
-function verAlerta(contenido){
+function verAlerta(contenido) {
     document.getElementById('alerta-titulo').innerHTML = contenido;
 }
 
 //JAVASCRIPT DE  CRONÓMETRO
 
 
-function inicio () {
+function inicio() {
     control = setInterval(cronometro,10);
     document.getElementById("inicio").disabled = true;
     document.getElementById("parar").disabled = false;
     document.getElementById("continuar").disabled = true;
     document.getElementById("reinicio").disabled = false;
 }
-function parar () {
+function parar() {
     clearInterval(control);
     document.getElementById("parar").disabled = true;
     document.getElementById("continuar").disabled = false;
 }
 
-function reinicio () {
+function reinicio() {
     clearInterval(control);
     centesimas = 0;
     segundos = 0;
@@ -272,7 +274,7 @@ function reinicio () {
     document.getElementById("reinicio").disabled = true;
 }
 
-function cronometro () {
+function cronometro() {
     if (centesimas < 99) {
         centesimas++;
         if (centesimas < 10) { centesimas = "0"+centesimas }
@@ -298,13 +300,13 @@ function cronometro () {
 
                 if (minutos < 10) { minutos = "0"+minutos }
                 Minutos.innerHTML = ""+minutos;
-            }else{
+            } else {
 
-                if(minutos < 5){
+                if (minutos < 5) {
 
                     if (minutos < 10) { minutos = "0"+minutos }
                     Minutos.innerHTML = ""+minutos;
-                }else{
+                } else {
                     descanso = false;
                     navigator.vibrate(550);
                     alert("De vuelta a trabajar!");
@@ -314,7 +316,7 @@ function cronometro () {
 
             }
 
-        }else{
+        }else {
             descanso = true;
             navigator.vibrate(550);
             alert("Es tiempo de un descanso!");
@@ -343,17 +345,17 @@ function guardarAjustes(){
 
     //Validar si hay algún input en blanco
     
-    if(usuario != "" || mail != "" || pass != "" || conf != ""){
+    if (usuario != "" || mail != "" || pass != "" || conf != "") {
     
       contador = localStorage.getItem('contador');
         z = localStorage.getItem('z');    
 
         
-        if(usuario != ""){
+        if (usuario != "") {
             document.getElementById('error').innerHTML = "";
             nom = JSON.parse(localStorage['usuarios']);
             n = [];
-            for(var i=0; i<=contador; i++){
+            for (var i=0; i<=contador; i++) {
             n.push(nom[i]);
         }
             n[z] = usuario;
@@ -362,11 +364,11 @@ function guardarAjustes(){
             nom = JSON.parse(localStorage['usuarios']);
         }
         
-        if(mail != ""){
+        if (mail != "") {
             document.getElementById('error').innerHTML = "";
             corr = JSON.parse(localStorage['correos']);
             c = [];
-            for(var i=0; i<=contador; i++){
+            for (var i=0; i<=contador; i++) {
             c.push(corr[i]);
         }
             c[z] = mail;
@@ -376,12 +378,12 @@ function guardarAjustes(){
 
         }
         
-        if( pass != "" && conf != ""){
+        if ( pass != "" && conf != "") {
             document.getElementById('error').innerHTML = "";
-            if( pass == conf){
+            if (pass == conf) {
                 contra = JSON.parse(localStorage['contraseñas']);
                 p = [];
-                for(var i=0; i<=contador; i++){
+                for (var i=0; i<=contador; i++) {
                     p.push(contra[i]);
         }
                 p[z] = pass;
@@ -389,35 +391,35 @@ function guardarAjustes(){
                 localStorage.setItem('contraseñas',contraseñas);
                 contra = JSON.parse(localStorage['contraseñas']);
             }
-            else{
+            else {
                 document.getElementById('error').innerHTML = "*Las contraseñas no coinciden.";
                 document.querySelector('.error').style.fontSize = "1em";
             }
         }
     }
-    else{
+    else {
         document.getElementById('error').innerHTML = "*Hay uno o más espacios vacíos.";
-                document.querySelector('.error').style.fontSize = "1em";
+            document.querySelector('.error').style.fontSize = "1em";
     }
 }
 
-function vaciarIndex(){
+function vaciarIndex() {
     document.getElementById('user').value = "";
     document.getElementById('password').value = "";
 }
 
-function vaciarRegistro(){
+function vaciarRegistro() {
     document.getElementById('usuario').value = "";
     document.getElementById('correo').value = "";
     document.getElementById('contraseña').value = "";
     document.getElementById('confirmar-contraseña').value = "";
 }
 
-function vaciarHome(){
+function vaciarHome() {
     document.getElementById('code').value = "";
 }
 
-function vaciarAjustes(){
+function vaciarAjustes() {
     document.getElementById('usuario').value = "";
     document.getElementById('c').value = "";
     document.getElementById('p').value = "";

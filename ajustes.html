@@ -1,8 +1,11 @@
-<html>
+<html lang="es">
 
   <head>
       <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>POMOMIND | Ajustes</title>
+      <link rel="shortcut icon" href="icon.png">
+
     <!--Ancho del dispositivo, no permite escalar-->
    <link rel="stylesheet" type="text/css" href="estilo_ajustes.css">
 
@@ -12,16 +15,15 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.js"></script>
 
     <script src="./funciones.js"></script>
-    </head>
+  </head>
     
     <body>
+
     <div class="pantalla-inicio">
-        
-        
          <div id="atajos">
-        <img src="ajustes.png" width="27" height="27">
-        <img src="home.png" width="37" height="37" onclick="navegar('home.html')">
-        <img src="salir.png" class="salir" width="30" height="30" onclick="navegar('index.html')">
+        <img src="ajustes.png" class="option" width="27" height="27">
+        <img src="home.png" class="option" width="37" height="37" onclick="navegar('home.html')">
+        <img src="salir.png" class="salir option" width="30" height="30" onclick="navegar('index.html')">
     </div>
     <header> 
       <h1 class="logo" if><a href="#">POMOMIND</a></h1>
@@ -48,13 +50,14 @@
         <button onclick="navegar('home.html')" id="cancelar">CANCELAR</button>
             </div>
         
-            </div>
-            
+            </div>     
      
   </div>
+
     </body>
 
-    <script>
+<script>
 window.addEventListener('load',vaciarAjustes,true);
 </script>
+
 </html>

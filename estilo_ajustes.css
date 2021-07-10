@@ -1,11 +1,10 @@
-
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: "Segoe UI";
 }
 
-.pantalla-inicio{
+.pantalla-inicio {
     position: fixed;
     top: 0;
     left: 0;
@@ -14,18 +13,24 @@
     background-color: white;
 }
 
-#atajos{
+.option {
+    cursor: pointer;
+}
+
+#atajos {
     position: absolute;
     margin-left: 69%;
     margin-top: 30px;
-        float: left;
+    float: left;
 }
+
 header {
-	background: #26C5BF;
+	background: linear-gradient(to right, green, red);
 	padding: 15px 20px;
     height: 70px;
 }
-.contenido{
+
+.contenido {
     width: 100%;
     float: left;
     margin-top: 10px;
@@ -59,25 +64,27 @@ h1.logo a {
 	letter-spacing: 0.2em;
     margin-top: 5px;
 }
-#h2{
+
+#h2 {
     margin-left: 25px;
     margin-top: 50px;
 }
-.mensaje2{
+
+.mensaje2 {
     margin-top: 40px;
     text-align: center;
     font-size: 1.2em;
 }
 
-.registro{
+.registro {
     float: left;
     margin-top: 10px;
     width: 90%;
     height: 48%;
     margin-left: 5%;
-
 }
-.registro>input{
+
+.registro>input {
     font-family: "Segoe UI";
     width: 100%;
     margin-bottom: 16px;
@@ -90,19 +97,19 @@ h1.logo a {
     padding-left: 10px;
     background-color: lightgray;
     border: none;
-
 }
 
-
-#mensaje{
+#mensaje {
     font-size: 1.3em;
     margin-bottom: -1px;
     margin-left: 25px;
     color: #555555;
 }
-#line{
+
+#line {
     margin-top: 435;
 }
+
 article {
 	border-bottom: 1px solid #d8d8d8;
 	padding: 10px 20px 0 20px;
@@ -110,40 +117,35 @@ article {
     margin-top: 0px;
 }
 
-.botones{
+.botones {
     width: 50%;
     height: 40%;
     margin-top: 185px;
     margin-left: 25%;
 }
 
-.botones>button{
+.botones>button {
     height: 35px;
     box-sizing: border-box;
     outline: none;
     border-radius: 8px;
     font-size: 1.2em;
-    background-color: #26C5BF;
+    background-color: #EC5337;
     border: none;
     color: white;
 }
 
-#guardar{
+#guardar {
     margin-top: 80px;
     width: 100%;
 }
-#cancelar{
+
+#cancelar {
     margin-top: 20px;
-    
     width: 100%;
 }
-#guardar:hover{
-    width: calc(100% - 15px);
-    height: 32px;
-    font-size: 1.1em;
-    margin-left: 1%;
-}
-#cancelar:hover{
+
+#guardar:hover, #cancelar:hover {
     width: calc(100% - 15px);
     height: 32px;
     font-size: 1.1em;
@@ -156,13 +158,16 @@ article {
 	font-size: 14px;
     margin-top: -30px;
 }
-.footer>.line{
+
+.footer>.line {
     margin-bottom: -5px;
 }
-#footer{
-     margin-top: -25px;
+
+#footer {
+    margin-top: -25px;
 }
-.error{
+
+.error {
     float: left;
     font-size: 1em;
     margin-bottom: -5px;
